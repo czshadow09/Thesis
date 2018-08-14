@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".result">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <LinearLayout
+
+                android:layout_width="350dp"
+                android:layout_height="131dp"
+                android:background="@color/colorPrimaryDark"
+                android:clipToPadding="false"
+                android:gravity="fill"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="175dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/PowerAverage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:paddingTop="10dp"
+                            android:text="EXERCISE NAME"
+                            android:textColor="@color/grey"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/exrecisename"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:paddingTop="12dp"
+                            android:text="Biceps Curl"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textweight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:paddingTop="10dp"
+                            android:text="Weight"
+                            android:textColor="@color/grey"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/Weightdata"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:paddingTop="12dp"
+                            android:text="100 kg"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="31dp"
+                android:background="@color/backgroundcolor"
+                android:gravity="fill"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="193dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="175dp"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom|center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="91dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textRep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:paddingTop="10dp"
+                            android:text="NO. OF REPS"
+                            android:textColor="@color/grey"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/Repdata"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="10"
+                            android:textColor="@color/colorYellow"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text1rm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:paddingTop="10dp"
+                            android:text="NO. OF REPS"
+                            android:textColor="@color/grey"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/data1rm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:paddingBottom="20dp"
+                            android:text="10 kg"
+                            android:textColor="@color/colorYellow"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom|fill"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="67dp"
+                            android:gravity="bottom|center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="103dp"
+                                android:layout_height="34dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:paddingTop="10dp"
+                                android:text="AVERAGE POWER"
+                                android:textColor="@color/grey"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="top|center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/datapower"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:paddingBottom="20dp"
+                                android:text="250"
+                                android:textColor="@color/colorYellow"
+                                android:textSize="50sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:paddingBottom="20dp"
+                                android:text="W"
+                                android:textColor="@color/colorYellow"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="31dp"
+                android:background="@color/backgroundcolor"
+                android:gravity="fill"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+            </LinearLayout>
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/Powergraph"
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:background="@color/white">
+
+            </com.github.mikephil.charting.charts.BarChart>
+
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="133dp"
+                android:background="@color/backgroundcolor"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+
+
+                <Button
+                    android:id="@+id/buttongo"
+                    android:layout_width="114dp"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/colorYellow"
+                    android:text="SAVE"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginRight="20dp"
+                     />
+
+                <Button
+                    android:id="@+id/buttonreset"
+                    android:layout_width="114dp"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="30dp"
+                    android:text="REPEAT"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/lightblue"/>
+            </LinearLayout>
+
+
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

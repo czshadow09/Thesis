@@ -31,7 +31,10 @@
         <activity android:name=".backscrolling" />
         <activity android:name=".legscrolling" />
         <activity android:name=".exerciselist" />
-        <activity android:name=".performui"></activity>
+        <activity android:name=".performui" />
+        <activity android:name=".duringexercise" />
+        <activity android:name=".result"></activity>
+
     </application>
 
 </manifest>

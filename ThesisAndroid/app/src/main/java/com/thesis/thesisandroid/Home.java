@@ -24,8 +24,10 @@ public class Home extends AppCompatActivity {
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getSupportActionBar().hide();
         buttonBMI = (Button) findViewById(R.id.buttonBMI);
         buttonBMI.setOnClickListener(new View.OnClickListener() {
             @Override

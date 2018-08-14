@@ -41,6 +41,8 @@
         <activity android:name="com.thesis.thesisandroid.legscrolling" />
         <activity android:name="com.thesis.thesisandroid.exerciselist" />
         <activity android:name="com.thesis.thesisandroid.performui" />
+        <activity android:name="com.thesis.thesisandroid.duringexercise" />
+        <activity android:name="com.thesis.thesisandroid.result" />
     </application>
 
 </manifest>

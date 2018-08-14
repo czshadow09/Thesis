@@ -46,6 +46,7 @@ public class legscrolling extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_legscrolling);
+        getSupportActionBar().hide();
         Spinner dropdown = findViewById(R.id.spinner3);
         mySpeed = (TextView)findViewById(R.id.dataspeed);
         myReps = (TextView)findViewById(R.id.datareps);

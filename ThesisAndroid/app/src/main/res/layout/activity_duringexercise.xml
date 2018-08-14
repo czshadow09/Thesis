@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundcolor"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".Home">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:id="@+id/form_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             >
+
+
+        <ProgressBar
+        android:id="@+id/progressBarCircleReps"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="256dp"
+        android:layout_height="262dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/drawable_circle_dark_blue"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="100"
+        android:progressDrawable="@drawable/drawable_circle_yellow"
+        android:rotation="-90" />
+
+            <TextView
+                android:id="@+id/textViewExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="63dp"
+                android:text="Exercise name"
+                android:textColor="@color/grey"
+                android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textViewReps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewExercise"
+        android:layout_centerHorizontal="true"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="100sp" />
+
+
+            <TextView
+                android:id="@+id/textReps"
+                android:layout_width="43dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textViewReps"
+                android:layout_toEndOf="@+id/textViewReps"
+                android:layout_toRightOf="@+id/textViewReps"
+                android:text="  Reps"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tapfinish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewReps"
+                android:layout_centerHorizontal="true"
+                android:text="Tap to Finish"
+                android:textColor="@color/grey"
+                android:textSize="15sp" />
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/powerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="123dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:orientation="vertical">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/Powergraph"
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:background="@color/white">
+
+        </com.github.mikephil.charting.charts.BarChart>
+    </LinearLayout>
+</RelativeLayout>
