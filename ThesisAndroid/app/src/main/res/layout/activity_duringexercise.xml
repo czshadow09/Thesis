@@ -78,6 +78,46 @@
                 android:textColor="@color/grey"
                 android:textSize="15sp" />
 
+            <TextView
+                android:id="@+id/weightp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="35dp"
+                android:text="TextView"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/oneRM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/progressBarCircleReps"
+                android:layout_marginBottom="-28dp"
+                android:layout_toStartOf="@+id/textViewReps"
+                android:text="RepMax"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/progressBarCircleReps"
+                android:layout_marginBottom="-28dp"
+                android:layout_toEndOf="@+id/textViewExercise"
+                android:text="TextView"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/velo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/progressBarCircleReps"
+                android:layout_marginBottom="-28dp"
+                android:layout_toEndOf="@+id/time"
+                android:text="TextView"
+                android:visibility="invisible" />
 
 
         </RelativeLayout>

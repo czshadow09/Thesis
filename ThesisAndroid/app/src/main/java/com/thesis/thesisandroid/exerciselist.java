@@ -1,5 +1,8 @@
 package com.thesis.thesisandroid;
 
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,10 +19,16 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Set;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 public class exerciselist extends AppCompatActivity implements View.OnClickListener {
     private Spinner mySpinner;
+    private EditText editText;
     private long timeCountInMilliSeconds = 1 * 60000;
 
     private enum TimerStatus {
@@ -33,12 +42,19 @@ public class exerciselist extends AppCompatActivity implements View.OnClickListe
     private ImageView imageViewReset1;
     private ImageView imageViewStartStop1;
     private CountDownTimer countDownTimer;
+    BluetoothAdapter mBluetoothAdapter;
+    BluetoothSocket mmSocket;
+    BluetoothDevice mmDevice;
+    OutputStream mmOutputStream;
+    InputStream mmInputStream;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exerciselist);
         getSupportActionBar().hide();
          mySpinner = (Spinner) findViewById(R.id.spinnerExercise);
+         editText = (EditText) findViewById(R.id.weightp);
+
         // method call to initialize the views
         initViews();
         // method call to initialize the listeners
@@ -50,11 +66,47 @@ public class exerciselist extends AppCompatActivity implements View.OnClickListe
         myAdapter.setDropDownViewResource(R.layout.spinner_item);
         mySpinner.setAdapter(myAdapter);
 
+        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        checkBTState();
+    }
+    void checkBTState()
+    {
+        if(mBluetoothAdapter == null)
+        {
+            Toast.makeText(getBaseContext(), "Bluetooth not supported in this device.", Toast.LENGTH_LONG).show();
+        }
+
+        if(!mBluetoothAdapter.isEnabled())
+        {
+            Intent enableBluetooth = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBluetooth, 0);
+        }
+
+        Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
+        if(pairedDevices.size() > 0)
+        {
+            for(BluetoothDevice device : pairedDevices)
+            {
+                if(device.getAddress().equals("00:21:13:01:3C:EC"))
+                {
+                    mmDevice = device;
+                    break;
+                }
+                else
+                {
+                    Toast.makeText(getBaseContext(), "Power Gloves not found.", Toast.LENGTH_LONG).show();
+                    finish();
+                }
+            }
+        }
 
     }
     public void openActivity_start(){
         Intent intent = new Intent(this, duringexercise.class);
-        startActivity(intent); }
+        intent.putExtra("Exercise name", mySpinner.getSelectedItem().toString());
+        intent.putExtra("Weight", editText.getText().toString());
+        startActivity(intent);
+    }
 
     private void initViews() {
         progressBarCircle1 = (ProgressBar) findViewById(R.id.progressBarCircle);
@@ -77,15 +129,31 @@ public class exerciselist extends AppCompatActivity implements View.OnClickListe
      * @param view
      */
    public void onClick(View view) {
-       switch (view.getId()) {
-           case R.id.imageViewReset:
-               reset();
-               break;
-           case R.id.imageViewStartStop:
-               startStop();
-               break;
+       try {
+           switch (view.getId()) {
+               case R.id.imageViewReset:
+                   reset();
+                   break;
+               case R.id.imageViewStartStop:
+                   openBT();
+                   startStop();
+                   break;
+           }
+       } catch (IOException e) {
+           Toast.makeText(getBaseContext(), "Power Gloves connection failed.", Toast.LENGTH_SHORT).show();
        }
    }
+
+    void openBT() throws IOException
+    {
+        UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"); //Standard SerialPortService ID
+        mmSocket = mmDevice.createRfcommSocketToServiceRecord(uuid);
+        mmSocket.connect();
+        mmOutputStream = mmSocket.getOutputStream();
+        mmInputStream = mmSocket.getInputStream();
+
+        Toast.makeText(getApplicationContext(), "Power Gloves connected.", Toast.LENGTH_SHORT).show();
+    }
 
     /**
      * method to reset count down timer
@@ -135,7 +203,7 @@ public class exerciselist extends AppCompatActivity implements View.OnClickListe
      * method to initialize the values for count down timer
      */
     private void setTimerValues() {
-        int time = 10;
+        int time = 5;
         // assigning values after converting to milliseconds
         timeCountInMilliSeconds = time * 1000;
     }

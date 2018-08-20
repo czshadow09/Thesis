@@ -85,7 +85,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="115dp"
-        android:text="10"
+        android:text="05"
         android:textColor="@color/colorYellow"
         android:textSize="40sp" />
 

@@ -52,12 +52,12 @@
                             android:textSize="10sp" />
 
                         <TextView
-                            android:id="@+id/exrecisename"
+                            android:id="@+id/exreciseName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:paddingTop="12dp"
-                            android:text="Biceps Curl"
+                            android:text="Exercise name"
                             android:textColor="@color/white"
                             android:textSize="20sp" />
                     </LinearLayout>
@@ -85,7 +85,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:paddingTop="12dp"
-                            android:text="100 kg"
+                            android:text="Weight"
                             android:textColor="@color/white"
                             android:textSize="20sp" />
                     </LinearLayout>
@@ -141,7 +141,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:text="10"
+                            android:text="reps"
                             android:textColor="@color/colorYellow"
                             android:textSize="30sp" />
                     </LinearLayout>
@@ -159,7 +159,7 @@
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"
                             android:paddingTop="10dp"
-                            android:text="NO. OF REPS"
+                            android:text="1 REP MAX"
                             android:textColor="@color/grey"
                             android:textSize="10sp" />
 
@@ -169,7 +169,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:paddingBottom="20dp"
-                            android:text="10 kg"
+                            android:text="How"
                             android:textColor="@color/colorYellow"
                             android:textSize="30sp" />
                     </LinearLayout>
@@ -217,7 +217,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
                                 android:paddingBottom="20dp"
-                                android:text="250"
+                                android:text="power"
                                 android:textColor="@color/colorYellow"
                                 android:textSize="50sp" />
 
