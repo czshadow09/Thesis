@@ -19,6 +19,7 @@ public class Home extends AppCompatActivity {
 
     private Button buttonBMI;
     private Button buttonPower;
+    private Button buttonReport;
     BluetoothAdapter mBluetoothAdapter;
     BluetoothDevice mmDevice;
     @Override
@@ -45,6 +46,15 @@ public class Home extends AppCompatActivity {
                 openActivity_power_exercise();
             }
         });
+        buttonReport = (Button) findViewById(R.id.buttonreport);
+
+        buttonReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View view) {
+                openActivity_report();
+            }
+        });
     }
 
     public void openActivity_BMI(){
@@ -53,6 +63,10 @@ public class Home extends AppCompatActivity {
     }
     public void openActivity_power_exercise(){
         Intent intent = new Intent(this, exerciselist.class);
+        startActivity(intent);
+    }
+    public void openActivity_report(){
+        Intent intent = new Intent(this, report.class);
         startActivity(intent);
     }
 
