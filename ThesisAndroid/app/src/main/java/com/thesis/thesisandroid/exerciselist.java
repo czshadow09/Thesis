@@ -129,19 +129,14 @@ public class exerciselist extends AppCompatActivity implements View.OnClickListe
      * @param view
      */
    public void onClick(View view) {
-       try {
            switch (view.getId()) {
                case R.id.imageViewReset:
                    reset();
                    break;
                case R.id.imageViewStartStop:
-                   openBT();
                    startStop();
                    break;
            }
-       } catch (IOException e) {
-           Toast.makeText(getBaseContext(), "Power Gloves connection failed.", Toast.LENGTH_SHORT).show();
-       }
    }
 
     void openBT() throws IOException

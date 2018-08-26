@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class result extends AppCompatActivity{
     private Button buttongo1;
@@ -17,6 +18,7 @@ public class result extends AppCompatActivity{
     TextView rep;
     TextView oneRepMax;
     TextView power;
+    DbHandler dbHandler;
     String st;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +30,24 @@ public class result extends AppCompatActivity{
         oneRepMax = (TextView) findViewById(R.id.data1rm);
         power = (TextView) findViewById(R.id.datapower);
         buttongo1 = (Button) findViewById(R.id.buttongo);
+        dbHandler = new DbHandler(this);
         buttongo1.setOnClickListener(new View.OnClickListener() {
             @Override
 
             public void onClick(View view) {
+                String exern = exercise.getText().toString();
+                String weigh = weight.getText().toString();
+                String reps = rep.getText().toString();
+                String pow = power.getText().toString();
+                if(exern.length() != 0 && weigh.length() != 0 && reps.length() != 0 && pow.length() != 0){
+                    AddData(exern, pow, reps, weigh);
+                    exercise.setText("");
+                    weight.setText("");
+                    rep.setText("");
+                    power.setText("");
+                } else {
+                    Toast.makeText(result.this, "Nothing in the text!", Toast.LENGTH_SHORT).show();
+                }
                 openActivity_go();
             }
         });
@@ -74,8 +90,17 @@ public class result extends AppCompatActivity{
         st = bundle.getString("power");
         power.setText(st);
     }
+    public void AddData(String name, String power, String repets, String weight){
+        boolean insertData = dbHandler.addData(name, power, repets, weight);
+
+        if(insertData == true){
+            Toast.makeText(this, "Exercise Saved!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Something went wrong :(", Toast.LENGTH_SHORT).show();
+        }
+    }
     public void openActivity_go(){
-        Intent intent = new Intent(this, Home.class);
+        Intent intent = new Intent(this, report.class);
         startActivity(intent);
     }
     public void openActivity_reset(){
