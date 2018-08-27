@@ -29,6 +29,9 @@ public class report extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
 
+        getSupportActionBar().setTitle("Report");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        onBackPressed();
         myDB = new DbHandler(this);
 
         dataList = new ArrayList<>();
@@ -47,5 +50,7 @@ public class report extends AppCompatActivity {
             mListView = (ListView) findViewById(R.id.listview);
             mListView.setAdapter(adapter);
         }
+    }
+    public void onBackPressed() {
     }
 }

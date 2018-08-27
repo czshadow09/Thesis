@@ -17,6 +17,8 @@ public class BMI extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmi);
+        getSupportActionBar().setTitle("BMI");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         height = (EditText) findViewById(R.id.height);
         weight = (EditText) findViewById(R.id.weight);
         result = (TextView) findViewById(R.id.result);

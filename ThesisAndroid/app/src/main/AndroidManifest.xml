@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".Home" />
-        <activity android:name=".BMI" />
+        <activity android:name=".BMI"
+            android:parentActivityName=".Home"> </activity>
         <activity android:name=".PowerExercise" />
         <activity android:name=".repmax" />
         <activity
@@ -34,7 +35,8 @@
         <activity android:name=".performui" />
         <activity android:name=".duringexercise" />
         <activity android:name=".result" />
-        <activity android:name=".report"></activity>
+        <activity android:name=".report"
+            android:parentActivityName=".Home"></activity>
     </application>
 
 </manifest>
