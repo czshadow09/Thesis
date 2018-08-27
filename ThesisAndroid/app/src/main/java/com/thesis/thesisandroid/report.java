@@ -40,7 +40,7 @@ public class report extends AppCompatActivity {
         else {
 
             while(items.moveToNext()) {
-                progress = new data(items.getString(1), items.getString(2), items.getString(3), items.getString(4), items.getString(5));
+                progress = new data(items.getString(1), items.getString(2), items.getString(4), items.getString(3), items.getString(5));
                 dataList.add(progress);
             }
             datalistAdapter adapter = new datalistAdapter(this, R.layout.adapter_view_layout, dataList);
