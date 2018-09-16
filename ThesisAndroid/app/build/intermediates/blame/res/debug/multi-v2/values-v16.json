@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\gimen\\OneDrive\\Documents\\GitHub\\Thesis\\ThesisAndroid\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\gimen\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-rc01.aar\\5d3b99ccb714990f9593508018ed2fd5\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\gimen\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-rc02.aar\\3b2bd78aa2335b7865cca9b3acfca48a\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\gimen\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0-rc01.aar\\311a19691855f4e51af25ec72c413f61\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\gimen\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0-rc02.aar\\0524e1ce811c82f893b7758104c15a17\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

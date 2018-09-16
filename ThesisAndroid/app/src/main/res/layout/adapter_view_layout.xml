@@ -24,13 +24,14 @@
 
         <TextView
             android:id="@+id/reportexername"
-            android:layout_width="170dp"
-            android:layout_height="88dp"
+            android:layout_width="119dp"
+            android:layout_height="87dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignTop="@+id/dumbell"
             android:layout_marginLeft="50dp"
             android:layout_marginStart="50dp"
+            android:layout_marginTop="1dp"
             android:layout_weight="69"
             android:gravity="center"
             android:paddingLeft="0dp"
@@ -62,19 +63,43 @@
         <ImageView
             android:id="@+id/powerr"
             android:layout_width="34dp"
-            android:layout_height="90dp"
-            android:layout_alignTop="@+id/dumbell"
-            android:layout_toStartOf="@+id/reportavrpower"
-            android:layout_toLeftOf="@+id/reportavrpower"
+            android:layout_height="88dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/date"
+            android:layout_toRightOf="@+id/date"
             android:src="@drawable/icon_power" />
+
+        <ImageView
+            android:id="@+id/repmax"
+            android:layout_width="34dp"
+            android:layout_height="88dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/datarepmax"
+            android:layout_toStartOf="@+id/datarepmax"
+            android:src="@drawable/icon_repmax" />
+
+        <TextView
+            android:id="@+id/datarepmax"
+            android:layout_width="61dp"
+            android:layout_height="84dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="30"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/reportavrpower"
-            android:layout_width="102dp"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/reportreps"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="86dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/powerr"
+            android:layout_toRightOf="@+id/powerr"
             android:gravity="center_vertical"
             android:paddingLeft="10dp"
             android:text="240 watt"
@@ -108,8 +133,8 @@
             android:layout_width="39dp"
             android:layout_height="31dp"
             android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/reportweight"
             android:layout_toLeftOf="@+id/reportweight"
+            android:layout_toStartOf="@+id/reportweight"
             android:src="@drawable/icon_weight" />
 
         <TextView
