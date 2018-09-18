@@ -37,8 +37,9 @@ public class datalistAdapter extends ArrayAdapter<data> {
         String reps = getItem(position).getreps();
         String weight = getItem(position).getweight();
         String date = getItem(position).getdate();
+        String onerepmax = getItem(position).getOnerepmax();
 
-       data data = new data(exername,power,reps,weight,date);
+       data data = new data(exername,power,reps,weight,date,onerepmax);
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mResource,parent,false);
@@ -48,12 +49,14 @@ public class datalistAdapter extends ArrayAdapter<data> {
         TextView TVreps = (TextView)convertView.findViewById(R.id.reportnumreps);
         TextView TVweight = (TextView)convertView.findViewById(R.id.reportweight);
         TextView TVdate = (TextView)convertView.findViewById(R.id.date);
+        TextView TVrepmax = (TextView)convertView.findViewById(R.id.datarepmax);
 
         TVexername.setText(exername);
         TVpower.setText(power);
         TVreps.setText(reps);
         TVweight.setText(weight);
         TVdate.setText(date);
+        TVrepmax.setText(onerepmax);
         return convertView;
 
     }

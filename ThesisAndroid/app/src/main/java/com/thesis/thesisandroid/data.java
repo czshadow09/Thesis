@@ -6,13 +6,15 @@ public class data {
     private String weight;
     private String reps;
     private String date;
+    private String onerm;
 
-    public data(String exername, String power, String weight, String reps,String date){
+    public data(String exername, String power, String weight, String reps,String date, String onerm){
         this.exername = exername;
         this.power = power;
         this.reps = reps;
         this.weight = weight;
         this.date = date;
+        this.onerm = onerm;
     }public String getexername(){
         return exername;
     }
@@ -37,6 +39,8 @@ public class data {
     public void setreps(){
         this.reps = reps;
     }
+    public String getOnerepmax() { return onerm; }
+    public void setOnerepmax() { this.onerm = onerm; }
     public String getdate(){
         return date;
     }

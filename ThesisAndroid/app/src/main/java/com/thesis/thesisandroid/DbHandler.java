@@ -19,7 +19,8 @@ public class DbHandler extends SQLiteOpenHelper {
     public static final String COL3 = "power";
     public static final String COL4 = "reps";
     public static final String COL5 = "weight";
-    public static final String COL6 = "date";
+    public static final String COL6 = "onerepmax";
+    public static final String COL7 = "date";
 
     public DbHandler(Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -28,7 +29,7 @@ public class DbHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                " exername TEXT, power TEXT, reps TEXT, weight TEXT, date DATETIME)";
+                " exername TEXT, power TEXT, reps TEXT, weight TEXT, onerepmax TEXT, date DATETIME)";
         db.execSQL(createTable);
     }
 
@@ -38,7 +39,7 @@ public class DbHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean addData(String name, String power, String reps, String weight) {
+    public boolean addData(String name, String power, String reps, String weight, String onerepmax) {
         String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -46,7 +47,8 @@ public class DbHandler extends SQLiteOpenHelper {
         contentValues.put(COL3, power);
         contentValues.put(COL4, reps);
         contentValues.put(COL5, weight);
-        contentValues.put(COL6, date);
+        contentValues.put(COL6, onerepmax);
+        contentValues.put(COL7, date);
 
         long result = db.insert(TABLE_NAME, null, contentValues);
 

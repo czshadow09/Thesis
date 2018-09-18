@@ -39,12 +39,14 @@ public class result extends AppCompatActivity{
                 String weigh = weight.getText().toString();
                 String reps = rep.getText().toString();
                 String pow = power.getText().toString();
-                if(exern.length() != 0 && weigh.length() != 0 && reps.length() != 0 && pow.length() != 0){
-                    AddData(exern, pow, reps, weigh);
+                String rpmax = oneRepMax.getText().toString();
+                if(exern.length() != 0 && weigh.length() != 0 && reps.length() != 0 && pow.length() != 0 && rpmax.length() != 0){
+                    AddData(exern, pow, reps, weigh, rpmax);
                     exercise.setText("");
                     weight.setText("");
                     rep.setText("");
                     power.setText("");
+                    oneRepMax.setText("");
                 } else {
                     Toast.makeText(result.this, "Nothing in the text!", Toast.LENGTH_SHORT).show();
                 }
@@ -90,8 +92,8 @@ public class result extends AppCompatActivity{
         st = bundle.getString("power");
         power.setText(st);
     }
-    public void AddData(String name, String power, String repets, String weight){
-        boolean insertData = dbHandler.addData(name, power, repets, weight);
+    public void AddData(String name, String power, String repets, String weight, String onerepmax){
+        boolean insertData = dbHandler.addData(name, power, repets, weight, onerepmax);
 
         if(insertData == true){
             Toast.makeText(this, "Exercise Saved!", Toast.LENGTH_SHORT).show();
