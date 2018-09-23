@@ -42,11 +42,15 @@ public class exerciselist extends AppCompatActivity implements View.OnClickListe
     private ImageView imageViewReset1;
     private ImageView imageViewStartStop1;
     private CountDownTimer countDownTimer;
+    //    private final String DEVICE_NAME="MyBTBee";
+    private final String DEVICE_ADDRESS="00:18:E5:04:81:A5";
+    private final UUID PORT_UUID = UUID.fromString("00001101-0000-1000-8000-00805f9b34fb");//Serial Port Service ID
     BluetoothAdapter mBluetoothAdapter;
-    BluetoothSocket mmSocket;
     BluetoothDevice mmDevice;
+    BluetoothSocket mmSocket;
     OutputStream mmOutputStream;
     InputStream mmInputStream;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,39 +70,6 @@ public class exerciselist extends AppCompatActivity implements View.OnClickListe
         myAdapter.setDropDownViewResource(R.layout.spinner_item);
         mySpinner.setAdapter(myAdapter);
 
-        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        checkBTState();
-    }
-    void checkBTState()
-    {
-        if(mBluetoothAdapter == null)
-        {
-            Toast.makeText(getBaseContext(), "Bluetooth not supported in this device.", Toast.LENGTH_LONG).show();
-        }
-
-        if(!mBluetoothAdapter.isEnabled())
-        {
-            Intent enableBluetooth = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableBluetooth, 0);
-        }
-
-        Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
-        if(pairedDevices.size() > 0)
-        {
-            for(BluetoothDevice device : pairedDevices)
-            {
-                if(device.getAddress().equals("00:21:13:01:3C:EC"))
-                {
-                    mmDevice = device;
-                    break;
-                }
-                else
-                {
-                    Toast.makeText(getBaseContext(), "Power Gloves not found.", Toast.LENGTH_LONG).show();
-                    finish();
-                }
-            }
-        }
 
     }
     public void openActivity_start(){
@@ -138,17 +109,6 @@ public class exerciselist extends AppCompatActivity implements View.OnClickListe
                    break;
            }
    }
-
-    void openBT() throws IOException
-    {
-        UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"); //Standard SerialPortService ID
-        mmSocket = mmDevice.createRfcommSocketToServiceRecord(uuid);
-        mmSocket.connect();
-        mmOutputStream = mmSocket.getOutputStream();
-        mmInputStream = mmSocket.getInputStream();
-
-        Toast.makeText(getApplicationContext(), "Power Gloves connected.", Toast.LENGTH_SHORT).show();
-    }
 
     /**
      * method to reset count down timer

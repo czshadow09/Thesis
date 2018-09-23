@@ -10,6 +10,7 @@ import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,19 +27,25 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.UUID;
 
 public class duringexercise extends AppCompatActivity implements View.OnClickListener{
     private ProgressBar progressbarReps;
-    private exerciselist mlist;
-    private Handler mhandler;
-    ConnectedThread mConnectedThread;
     BarChart barChart;
+    private final String DEVICE_ADDRESS="00:18:E5:04:81:A5";
+    private final UUID PORT_UUID = UUID.fromString("00001101-0000-1000-8000-00805f9b34fb");//Serial Port Service ID
+    BluetoothDevice mmDevice;
     BluetoothSocket mmSocket;
     OutputStream mmOutputStream;
     InputStream mmInputStream;
+    Thread thread;
+    byte buffer[];
+    int bufferPosition;
+    boolean stopThread;
+    boolean deviceConnected;
     Random random;
     TextView tv;
     TextView weigh;
@@ -46,11 +53,11 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
     TextView pow;
     TextView oR;
     TextView timer;
+    TextView textView;
+    Button buttonStart;
     double times = 0;
     double reps;
     double repets = 0;
-    double iniDis = 1.52;
-    double finDis = 2;
     double sumDis = 0;
     double kilos = 0;
     double velocity = 0;
@@ -59,19 +66,18 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
     int index = 0;
     StringBuilder sb = new StringBuilder();
 
-    private final static int MESSAGE_READ = 0;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_duringexercise);
-        mlist = new exerciselist();
         tv = findViewById(R.id.textViewExercise);
         weigh = findViewById(R.id.weightp);
         timer = findViewById(R.id.time);
         pow = findViewById(R.id.velo);
         rep = findViewById(R.id.textViewReps);
         oR = findViewById(R.id.oneRM);
+        textView = (TextView) findViewById(R.id.Sensor);
         barChart = (BarChart)findViewById(R.id.Powergraph);
         final ArrayList<BarEntry> barEntries = new ArrayList<>();
         BarDataSet barDataSet = new BarDataSet(barEntries, "Reps");
@@ -86,8 +92,27 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
         initViews1();
         initListeners1();
         onBackPressed();
-        getExercise();
-        getWeight();
+    }
+
+    public void chooseExercise() {
+        String exercise = tv.getText().toString();
+        if(exercise == "Benchpress (chest)") {
+            onBenchPress();
+        }
+        else if(exercise == "Deadlift (back)") {
+            onDeadLift();
+        }
+        else if(exercise == "Barbell row (back)") {
+            onBarbellRow();
+        }
+        else if(exercise == "Barbell Curl (arm)") {
+            onBarbellCurl();
+        }
+    }
+
+    public void onBenchPress() {
+        final double iniDis = 2;
+        final double finDis = 3;
         Thread t = new Thread(){
             @Override
             public void run(){
@@ -122,37 +147,227 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
             }
         };
         t.start();
-
-        mhandler = new Handler() {
+    }
+    public void onDeadLift() {
+        final double iniDis = 2;
+        final double finDis = 4;
+        Thread t = new Thread(){
             @Override
-            public void handleMessage(android.os.Message msg) {
-                if(msg.what == MESSAGE_READ) {
-                    byte[] readBuf = (byte[]) msg.obj;
-                    String readMessage = new String(readBuf, 0, msg.arg1);
-                    sb.append(readMessage);
-                    int endOfLineIndex = sb.indexOf(";");
-                    if(endOfLineIndex > 0) {
-                        String dataInPrint = sb.substring(0, endOfLineIndex);
+            public void run(){
+                while(!isInterrupted()){
 
-                        if(sb.charAt(0) == '#')
-                        {
-                            String acc = sb.substring(1,5);
+                    try {
+                        Thread.sleep(1000);
 
-                            rep.setText(acc);
-                        }
-                        sb.delete(0, sb.length());
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                times++;
+                                if(times == 2){
+                                    sumDis = finDis - iniDis;
+                                    velocity = sumDis / times;
+                                    kilos = Double.parseDouble(weigh.getText().toString());
+                                    double newt = kilos * 9.8066500286389;
+                                    power = newt * velocity;
+                                    double round = Math.round(power);
+                                    int result = (int) round;
+                                    pow.setText(String.valueOf(result));
+                                    times = 0;
+                                }
+                                repets++;
+                                rep.setText(String.valueOf((int)repets));
+                            }
+                        });
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
                     }
                 }
             }
         };
+        t.start();
+    }
+    public void onBarbellRow() {
+        final double iniDis = 2;
+        final double finDis = 5;
+        Thread t = new Thread(){
+            @Override
+            public void run(){
+                while(!isInterrupted()){
+
+                    try {
+                        Thread.sleep(1000);
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                times++;
+                                if(times == 2){
+                                    sumDis = finDis - iniDis;
+                                    velocity = sumDis / times;
+                                    kilos = Double.parseDouble(weigh.getText().toString());
+                                    double newt = kilos * 9.8066500286389;
+                                    power = newt * velocity;
+                                    double round = Math.round(power);
+                                    int result = (int) round;
+                                    pow.setText(String.valueOf(result));
+                                    times = 0;
+                                }
+                                repets++;
+                                rep.setText(String.valueOf((int)repets));
+                            }
+                        });
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
+        t.start();
+    }
+    public void onBarbellCurl() {
+        final double iniDis = 2;
+        final double finDis = 6;
+        Thread t = new Thread(){
+            @Override
+            public void run(){
+                while(!isInterrupted()){
+
+                    try {
+                        Thread.sleep(1000);
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                times++;
+                                if(times == 2){
+                                    sumDis = finDis - iniDis;
+                                    velocity = sumDis / times;
+                                    kilos = Double.parseDouble(weigh.getText().toString());
+                                    double newt = kilos * 9.8066500286389;
+                                    power = newt * velocity;
+                                    double round = Math.round(power);
+                                    int result = (int) round;
+                                    pow.setText(String.valueOf(result));
+                                    times = 0;
+                                }
+                                repets++;
+                                rep.setText(String.valueOf((int)repets));
+                            }
+                        });
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
+        t.start();
+    }
+    public boolean BTinit()
+    {
+        boolean found=false;
+        BluetoothAdapter bluetoothAdapter=BluetoothAdapter.getDefaultAdapter();
+        if (bluetoothAdapter == null) {
+            Toast.makeText(getApplicationContext(),"Device doesnt Support Bluetooth",Toast.LENGTH_SHORT).show();
+        }
+        if(!bluetoothAdapter.isEnabled())
+        {
+            Intent enableAdapter = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableAdapter, 0);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        Set<BluetoothDevice> bondedDevices = bluetoothAdapter.getBondedDevices();
+        if(bondedDevices.isEmpty())
+        {
+            Toast.makeText(getApplicationContext(),"Please Pair the Device first",Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            for (BluetoothDevice iterator : bondedDevices)
+            {
+                if(iterator.getAddress().equals(DEVICE_ADDRESS))
+                {
+                    mmDevice=iterator;
+                    found=true;
+                    break;
+                }
+            }
+        }
+        return found;
+    }
+
+    public boolean BTconnect()
+    {
+        boolean connected=true;
+        try {
+            mmSocket = mmDevice.createRfcommSocketToServiceRecord(PORT_UUID);
+            mmSocket.connect();
+        } catch (IOException e) {
+            e.printStackTrace();
+            connected=false;
+        }
+        if(connected)
+        {
+            try {
+                mmOutputStream=mmSocket.getOutputStream();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                mmInputStream=mmSocket.getInputStream();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+
+        return connected;
+    }
+
+    void beginListenForData()
+    {
+        final Handler handler = new Handler();
+        stopThread = false;
+        buffer = new byte[1024];
+        Thread thread  = new Thread(new Runnable()
+        {
+            public void run()
+            {
+                while(!Thread.currentThread().isInterrupted() && !stopThread)
+                {
+                    try
+                    {
+                        int byteCount = mmInputStream.available();
+                        if(byteCount > 0)
+                        {
+                            byte[] rawBytes = new byte[byteCount];
+                            mmInputStream.read(rawBytes);
+                            final String string=new String(rawBytes,"UTF-8");
+                            handler.post(new Runnable() {
+                                public void run()
+                                {
+                                    textView.setText(string);
+                                }
+                            });
+
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        stopThread = true;
+                    }
+                }
+            }
+        });
+
+        thread.start();
     }
     @Override
     public void onBackPressed() {
-    }
-    public void getData() {
-        if(mConnectedThread != null){
-            mConnectedThread.write("1");
-        }
     }
     public void openresult(){
         double weight = Double.parseDouble(weigh.getText().toString());
@@ -170,10 +385,12 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
     }
     private void initViews1() {
         progressbarReps = (ProgressBar) findViewById(R.id.progressBarCircleReps);
+        buttonStart = findViewById(R.id.startButton);
 
     }
     private void initListeners1() {
         progressbarReps.setOnClickListener(this);
+        buttonStart.setOnClickListener(this);
 
     }
     public void getExercise() {
@@ -191,7 +408,16 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
             case R.id.progressBarCircleReps:
                 openresult();
                 break;
-
+            case R.id.startButton:
+                if(BTinit())
+                {
+                    if(BTconnect())
+                    {
+                        deviceConnected=true;
+                        beginListenForData();
+                        break;
+                    }
+                }
         }
     }
 
@@ -223,60 +449,6 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
         mmSocket.close();
         Toast.makeText(getApplicationContext(), "Power Gloves disconnected.", Toast.LENGTH_SHORT).show();
     }
-
-    private class ConnectedThread extends Thread {
-        private final BluetoothSocket bluetoothSocket;
-        private final InputStream mmInputStream;
-        //private final OutputStream mmOutputStream;
-
-        public ConnectedThread(BluetoothSocket socket) {
-            bluetoothSocket = socket;
-            InputStream tmpIn = null;
-            OutputStream tmpOut = null;
-
-            // Get the BluetoothSocket input and output streams
-            try {
-                tmpIn = socket.getInputStream();
-                //tmpOut = socket.getOutputStream();
-            } catch (IOException e) {
-            }
-
-            mmInputStream = tmpIn;
-            //mmOutputStream = tmpOut;
-        }//endofConnectedThread(BluetoothSocket socket)
-
-
-        public void run() {
-            byte[] buffer = new byte[1024];
-            int bytes;
-
-            // Keep listening to the InputStream while connected
-            while (true) {
-                try {
-                    // Read from the InputStream
-                    bytes = mmInputStream.read(buffer);
-
-                    // Send the obtained bytes to the UI Activity
-                    mhandler.obtainMessage(MESSAGE_READ, bytes, -1, buffer)
-                            .sendToTarget();
-                } catch (IOException e) {
-                    break;
-                }
-            }
-        }//end of void run
-        //write method
-        public void write(String input) {
-            byte[] bytes = input.getBytes();//converts entered String into bytes
-            try {
-                mmInputStream.read(bytes);//write bytes over BT connection via outstream
-            } catch (IOException e) {
-                //if you cannot write, close the application
-                Toast.makeText(getBaseContext(), "Connection Failed", Toast.LENGTH_LONG).show();
-                finish();
-
-            }
-        }
-    }//end of connectecthread
 
 
 }

@@ -117,15 +117,8 @@
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string-array name="Exercise">
         <item>Benchpress (chest)</item>
-        <item>Incline Benchpress (chest)</item>
-        <item>Decline Benchpress (chest)</item>
         <item>Deadlift (back)</item>
-        <item>Barbell roow (back)</item>
-        <item>Dumbbell Curl (arm)</item>
         <item>Barbell Curl (arm)</item>
-        <item>Dumbell Press (shoulder)</item>
-        <item>Squat (Legs)</item>
-        <item>Sumo Deadlift (Legs)</item>
     </string-array>
 
     <string name="title_activity_resultdata">resultdata</string>

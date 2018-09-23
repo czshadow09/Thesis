@@ -119,6 +119,16 @@
                 android:text="TextView"
                 android:visibility="invisible" />
 
+            <TextView
+                android:id="@+id/Sensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textViewExercise"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="-63dp"
+                android:layout_marginEnd="35dp"
+                android:text="TextView" />
+
 
         </RelativeLayout>
 
@@ -144,4 +154,14 @@
 
         </com.github.mikephil.charting.charts.BarChart>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="39dp"
+        android:text="Button" />
+
 </RelativeLayout>
