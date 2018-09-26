@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Set;
 import java.util.Timer;
@@ -92,6 +93,8 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
         initViews1();
         initListeners1();
         onBackPressed();
+        getExercise();
+        getWeight();
     }
 
     public void chooseExercise() {
@@ -125,19 +128,25 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                             @Override
                             public void run() {
                                 times++;
-                                if(times == 2){
-                                    sumDis = finDis - iniDis;
-                                    velocity = sumDis / times;
-                                    kilos = Double.parseDouble(weigh.getText().toString());
-                                    double newt = kilos * 9.8066500286389;
-                                    power = newt * velocity;
-                                    double round = Math.round(power);
-                                    int result = (int) round;
-                                    pow.setText(String.valueOf(result));
-                                    times = 0;
+                                sumDis = finDis - iniDis;
+                                velocity = sumDis / times;
+                                kilos = Double.parseDouble(weigh.getText().toString());
+                                double newt = kilos * 9.8066500286389;
+                                power = newt * velocity;
+                                double round = Math.round(power);
+                                int result = (int) round;
+                                pow.setText(String.valueOf(result));
+                                times = 0;
+                                double accel = Double.parseDouble(textView.getText().toString());
+                                if(accel >= 2) {
+                                    repets++;
+                                    rep.setText(String.valueOf((int)repets));
+                                    try {
+                                        Thread.sleep(1500);
+                                    } catch (InterruptedException e) {
+                                        e.printStackTrace();
+                                    }
                                 }
-                                repets++;
-                                rep.setText(String.valueOf((int)repets));
                             }
                         });
                     } catch (InterruptedException e) {
@@ -350,8 +359,13 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                             handler.post(new Runnable() {
                                 public void run()
                                 {
-                                    textView.setText(string);
+                                    sb.append(string);
+                                    String[] sent = sb.toString().split(";");
+                                    for(String sensor : sent) {
+                                        textView.setText(sensor);
+                                    }
                                 }
+
                             });
 
                         }
@@ -415,6 +429,7 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                     {
                         deviceConnected=true;
                         beginListenForData();
+                        onBenchPress();
                         break;
                     }
                 }
