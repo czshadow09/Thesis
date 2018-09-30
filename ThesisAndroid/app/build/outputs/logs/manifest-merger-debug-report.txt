@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-42:12
 MERGED from [com.android.support:design:28.0.0-alpha3] C:\Users\Omen\.gradle\caches\transforms-1\files-1.1\design-28.0.0-alpha3.aar\cae441cddbd78a20b6d45087acb13a3b\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Omen\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\bc094f852d4030bd736bc0f0af091392\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Omen\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\203ee60dc09783394db2ee0c4783b208\AndroidManifest.xml:2:1-11:12
@@ -38,20 +38,20 @@ MERGED from [com.android.support:print:28.0.0] C:\Users\Omen\.gradle\caches\tran
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Omen\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\abd0b08cacbda416a75bb26cb1610281\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Omen\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\b5678ab4da84ed4c6c2dc71dc1716171\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Omen\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\bd50d80e231be7923b022556260c30f3\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-42:12
 	package
 		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:2:11-69
@@ -64,7 +64,7 @@ ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\Andr
 	android:name
 		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:6:22-65
 application
-ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:8:5-31:19
+ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:8:5-40:19
 MERGED from [com.android.support:design:28.0.0-alpha3] C:\Users\Omen\.gradle\caches\transforms-1\files-1.1\design-28.0.0-alpha3.aar\cae441cddbd78a20b6d45087acb13a3b\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0-alpha3] C:\Users\Omen\.gradle\caches\transforms-1\files-1.1\design-28.0.0-alpha3.aar\cae441cddbd78a20b6d45087acb13a3b\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Omen\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\203ee60dc09783394db2ee0c4783b208\AndroidManifest.xml:9:5-20
@@ -79,12 +79,12 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Omen\.grad
 		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:13:9-35
 	android:label
 		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:11:9-41
-	android:allowackup
-		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:9:9-34
 	android:roundIcon
 		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:12:9-54
 	android:icon
 		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
 		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:14:9-40
 activity#com.thesis.thesisandroid.SplashScreen
@@ -115,24 +115,54 @@ ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\Andr
 		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:25:13-47
 	android:name
 		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:24:19-38
+activity#com.thesis.thesisandroid.PowerExercise
+ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:26:9-51
+	android:name
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:26:19-48
+activity#com.thesis.thesisandroid.repmax
+ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:27:9-44
+	android:name
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:27:19-41
+activity#com.thesis.thesisandroid.chestscrolling
+ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:28:9-30:69
+	android:label
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:30:13-66
+	android:name
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:29:13-43
+activity#com.thesis.thesisandroid.armscrolling
+ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:31:9-50
+	android:name
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:31:19-47
+activity#com.thesis.thesisandroid.backscrolling
+ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:32:9-51
+	android:name
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:32:19-48
+activity#com.thesis.thesisandroid.legscrolling
+ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:33:9-50
+	android:name
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:33:19-47
 activity#com.thesis.thesisandroid.exerciselist
-ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:26:9-50
+ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:34:9-50
 	android:name
-		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:26:19-47
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:34:19-47
+activity#com.thesis.thesisandroid.performui
+ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:35:9-47
+	android:name
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:35:19-44
 activity#com.thesis.thesisandroid.duringexercise
-ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:27:9-52
+ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:36:9-52
 	android:name
-		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:27:19-49
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:36:19-49
 activity#com.thesis.thesisandroid.result
-ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:28:9-44
+ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:37:9-44
 	android:name
-		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:28:19-41
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:37:19-41
 activity#com.thesis.thesisandroid.report
-ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:29:9-30:59
+ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:38:9-39:59
 	android:parentActivityName
-		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:30:13-47
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:39:13-47
 	android:name
-		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:29:19-41
+		ADDED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml:38:19-41
 uses-sdk
 INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Omen\Documents\GitHub\Thesis\ThesisAndroid\app\src\main\AndroidManifest.xml

@@ -12,13 +12,14 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
 
     <application
-        android:allowackup="true"
+        android:allowBackup="true"
         android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.thesis.thesisandroid.SplashScreen" >
             <intent-filter>
@@ -33,7 +34,16 @@
             android:name="com.thesis.thesisandroid.BMI"
             android:parentActivityName="com.thesis.thesisandroid.Home" >
         </activity>
+        <activity android:name="com.thesis.thesisandroid.PowerExercise" />
+        <activity android:name="com.thesis.thesisandroid.repmax" />
+        <activity
+            android:name="com.thesis.thesisandroid.chestscrolling"
+            android:label="@string/title_activity_chestscrolling" />
+        <activity android:name="com.thesis.thesisandroid.armscrolling" />
+        <activity android:name="com.thesis.thesisandroid.backscrolling" />
+        <activity android:name="com.thesis.thesisandroid.legscrolling" />
         <activity android:name="com.thesis.thesisandroid.exerciselist" />
+        <activity android:name="com.thesis.thesisandroid.performui" />
         <activity android:name="com.thesis.thesisandroid.duringexercise" />
         <activity android:name="com.thesis.thesisandroid.result" />
         <activity
