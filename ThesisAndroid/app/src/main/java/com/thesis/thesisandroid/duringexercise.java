@@ -27,6 +27,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 import java.util.Set;
 import java.util.Timer;
@@ -66,6 +67,7 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
     double repmax = 0;
     int index = 0;
     StringBuilder sb = new StringBuilder();
+    List<Integer> powList = new ArrayList<Integer>();
 
     @Override
 
@@ -100,7 +102,7 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
     public void chooseExercise() {
         String exercise = tv.getText().toString();
         if(exercise == "Benchpress (chest)") {
-            onBenchPress();
+            onBarbellCurl1();
         }
         else if(exercise == "Deadlift (back)") {
             onDeadLift();
@@ -113,36 +115,36 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    public void onBenchPress() {
-        final double iniDis = 2;
-        final double finDis = 3;
+    public void onBarbellCurl1() {
+        final double iniDis = 1.79;
+        final double finDis = 1.98;
         Thread t = new Thread(){
             @Override
             public void run(){
                 while(!isInterrupted()){
 
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(400);
 
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 times++;
-                                sumDis = finDis - iniDis;
-                                velocity = sumDis / times;
-                                kilos = Double.parseDouble(weigh.getText().toString());
-                                double newt = kilos * 9.8066500286389;
-                                power = newt * velocity;
-                                double round = Math.round(power);
-                                int result = (int) round;
-                                pow.setText(String.valueOf(result));
-                                times = 0;
                                 double accel = Double.parseDouble(textView.getText().toString());
-                                if(accel >= 2) {
+                                if(accel >= 1.98) {
+                                    sumDis = finDis - iniDis;
+                                    velocity = sumDis / times;
+                                    kilos = Double.parseDouble(weigh.getText().toString());
+                                    double newt = kilos * 9.8066500286389;
+                                    power = newt * velocity;
+                                    double round = Math.round(power);
+                                    int result = (int) round;
+                                    addValue(result);
                                     repets++;
+                                    times = 0;
                                     rep.setText(String.valueOf((int)repets));
                                     try {
-                                        Thread.sleep(1500);
+                                        Thread.sleep(850);
                                     } catch (InterruptedException e) {
                                         e.printStackTrace();
                                     }
@@ -271,6 +273,9 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
         };
         t.start();
     }
+    public void addValue(Integer x) {
+        powList.add(x);
+    }
     public boolean BTinit()
     {
         boolean found=false;
@@ -389,12 +394,19 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
         double roundOff = Math.round(repmax);
         int result = (int) roundOff;
         oR.setText(String.valueOf(result));
+        int sum = 0;
+        int avg = 0;
+        for(int i = 0; i < powList.size(); i++) {
+            sum += powList.get(i);
+        }
+        avg = sum / powList.size();
+        powList.clear();
         Intent intent = new Intent(this, result.class);
         intent.putExtra("Exercise name", tv.getText().toString());
         intent.putExtra("Weight", weigh.getText().toString() + " kg");
         intent.putExtra("reps", rep.getText().toString());
         intent.putExtra("RepMax", oR.getText().toString());
-        intent.putExtra("power", pow.getText().toString());
+        intent.putExtra("power", String.valueOf(avg));
         startActivity(intent);
     }
     private void initViews1() {
@@ -429,7 +441,7 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                     {
                         deviceConnected=true;
                         beginListenForData();
-                        onBenchPress();
+                        onBarbellCurl1();
                         break;
                     }
                 }

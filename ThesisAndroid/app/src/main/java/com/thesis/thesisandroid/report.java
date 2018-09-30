@@ -3,19 +3,10 @@ package com.thesis.thesisandroid;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.widget.ArrayAdapter;
-import android.widget.CursorAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class report extends AppCompatActivity {
 
@@ -43,7 +34,8 @@ public class report extends AppCompatActivity {
         else {
 
             while(items.moveToNext()) {
-                progress = new data(items.getString(1), items.getString(2), items.getString(4), items.getString(3), items.getString(6), items.getString(5));
+                progress = new data(items.getString(1), items.getString(2), items.getString(4),
+                        items.getString(3), items.getString(6), items.getString(5));
                 dataList.add(progress);
             }
             datalistAdapter adapter = new datalistAdapter(this, R.layout.adapter_view_layout, dataList);

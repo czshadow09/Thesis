@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,12 +22,12 @@ public class result extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        exercise = (TextView) findViewById(R.id.exreciseName);
-        weight = (TextView) findViewById(R.id.Weightdata);
-        rep = (TextView) findViewById(R.id.Repdata);
-        oneRepMax = (TextView) findViewById(R.id.data1rm);
-        power = (TextView) findViewById(R.id.datapower);
-        buttongo1 = (Button) findViewById(R.id.buttongo);
+        exercise = findViewById(R.id.exreciseName);
+        weight = findViewById(R.id.Weightdata);
+        rep = findViewById(R.id.Repdata);
+        oneRepMax = findViewById(R.id.data1rm);
+        power = findViewById(R.id.datapower);
+        buttongo1 = findViewById(R.id.buttongo);
         dbHandler = new DbHandler(this);
         buttongo1.setOnClickListener(new View.OnClickListener() {
             @Override

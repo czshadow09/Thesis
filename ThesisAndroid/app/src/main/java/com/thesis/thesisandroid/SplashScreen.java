@@ -8,9 +8,6 @@ import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.Toast;
-
-import java.util.Set;
 
 
 public class SplashScreen extends AppCompatActivity {

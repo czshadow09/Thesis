@@ -1,35 +1,22 @@
 package com.thesis.thesisandroid;
 
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
-import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.Set;
-import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 public class exerciselist extends AppCompatActivity implements View.OnClickListener {
     private Spinner mySpinner;
     private EditText editText;
-    private long timeCountInMilliSeconds = 1 * 60000;
+    private long timeCountInMilliSeconds = 60000;
 
     private enum TimerStatus {
         STARTED,
@@ -42,14 +29,6 @@ public class exerciselist extends AppCompatActivity implements View.OnClickListe
     private ImageView imageViewReset1;
     private ImageView imageViewStartStop1;
     private CountDownTimer countDownTimer;
-    //    private final String DEVICE_NAME="MyBTBee";
-    private final String DEVICE_ADDRESS="00:18:E5:04:81:A5";
-    private final UUID PORT_UUID = UUID.fromString("00001101-0000-1000-8000-00805f9b34fb");//Serial Port Service ID
-    BluetoothAdapter mBluetoothAdapter;
-    BluetoothDevice mmDevice;
-    BluetoothSocket mmSocket;
-    OutputStream mmOutputStream;
-    InputStream mmInputStream;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
