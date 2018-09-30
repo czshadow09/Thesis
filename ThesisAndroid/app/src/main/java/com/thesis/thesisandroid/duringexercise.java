@@ -28,15 +28,21 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
 import java.util.Arrays;
 <<<<<<< HEAD
 import java.util.List;
+<<<<<<< HEAD
 =======
 >>>>>>> parent of f0e198d... PUSH!!!
 =======
 >>>>>>> parent of f0e198d... PUSH!!!
 =======
 >>>>>>> parent of 81eb1e5... fdf
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
 import java.util.Random;
 import java.util.Set;
 import java.util.Timer;
@@ -103,6 +109,8 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
         initViews1();
         initListeners1();
         onBackPressed();
+        getExercise();
+        getWeight();
     }
 
     public void chooseExercise() {
@@ -139,6 +147,7 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 double accel = Double.parseDouble(textView.getText().toString());
                                 if(accel >= 1.98) {
 =======
@@ -147,6 +156,10 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
 =======
                                 if(times == 2){
 >>>>>>> parent of f0e198d... PUSH!!!
+=======
+                                double accel = Double.parseDouble(textView.getText().toString());
+                                if(accel >= 1.98) {
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
                                     sumDis = finDis - iniDis;
                                     velocity = sumDis / times;
                                     kilos = Double.parseDouble(weigh.getText().toString());
@@ -156,6 +169,9 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                                     int result = (int) round;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
                                     addValue(result);
 =======
                                 sumDis = finDis - iniDis;
@@ -177,6 +193,7 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                                     } catch (InterruptedException e) {
                                         e.printStackTrace();
                                     }
+<<<<<<< HEAD
 =======
                                     pow.setText(String.valueOf(result));
                                     times = 0;
@@ -185,9 +202,9 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                                     pow.setText(String.valueOf(result));
                                     times = 0;
 >>>>>>> parent of f0e198d... PUSH!!!
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
                                 }
-                                repets++;
-                                rep.setText(String.valueOf((int)repets));
                             }
                         });
                     } catch (InterruptedException e) {
@@ -400,8 +417,13 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                             handler.post(new Runnable() {
                                 public void run()
                                 {
-                                    textView.setText(string);
+                                    sb.append(string);
+                                    String[] sent = sb.toString().split(";");
+                                    for(String sensor : sent) {
+                                        textView.setText(sensor);
+                                    }
                                 }
+
                             });
 
                         }
@@ -468,6 +490,7 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         onBarbellCurl1();
 =======
 >>>>>>> parent of f0e198d... PUSH!!!
@@ -476,6 +499,9 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
 =======
                         onBenchPress();
 >>>>>>> parent of 81eb1e5... fdf
+=======
+                        onBarbellCurl1();
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
                         break;
                     }
                 }
