@@ -26,8 +26,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+<<<<<<< HEAD
 import java.util.Arrays;
 import java.util.List;
+=======
+>>>>>>> parent of f0e198d... PUSH!!!
 import java.util.Random;
 import java.util.Set;
 import java.util.Timer;
@@ -95,8 +98,6 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
         initViews1();
         initListeners1();
         onBackPressed();
-        getExercise();
-        getWeight();
     }
 
     public void chooseExercise() {
@@ -130,8 +131,12 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                             @Override
                             public void run() {
                                 times++;
+<<<<<<< HEAD
                                 double accel = Double.parseDouble(textView.getText().toString());
                                 if(accel >= 1.98) {
+=======
+                                if(times == 2){
+>>>>>>> parent of f0e198d... PUSH!!!
                                     sumDis = finDis - iniDis;
                                     velocity = sumDis / times;
                                     kilos = Double.parseDouble(weigh.getText().toString());
@@ -139,6 +144,7 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                                     power = newt * velocity;
                                     double round = Math.round(power);
                                     int result = (int) round;
+<<<<<<< HEAD
                                     addValue(result);
                                     repets++;
                                     times = 0;
@@ -148,7 +154,13 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                                     } catch (InterruptedException e) {
                                         e.printStackTrace();
                                     }
+=======
+                                    pow.setText(String.valueOf(result));
+                                    times = 0;
+>>>>>>> parent of f0e198d... PUSH!!!
                                 }
+                                repets++;
+                                rep.setText(String.valueOf((int)repets));
                             }
                         });
                     } catch (InterruptedException e) {
@@ -364,13 +376,8 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                             handler.post(new Runnable() {
                                 public void run()
                                 {
-                                    sb.append(string);
-                                    String[] sent = sb.toString().split(";");
-                                    for(String sensor : sent) {
-                                        textView.setText(sensor);
-                                    }
+                                    textView.setText(string);
                                 }
-
                             });
 
                         }
@@ -441,7 +448,10 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                     {
                         deviceConnected=true;
                         beginListenForData();
+<<<<<<< HEAD
                         onBarbellCurl1();
+=======
+>>>>>>> parent of f0e198d... PUSH!!!
                         break;
                     }
                 }
