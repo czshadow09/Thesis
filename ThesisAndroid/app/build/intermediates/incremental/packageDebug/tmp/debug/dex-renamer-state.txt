@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Sun Sep 23 13:41:55 SGT 2018
+=======
+#Wed Sep 26 23:24:37 SGT 2018
+>>>>>>> parent of 81eb1e5... fdf
 base.0=C\:\\Users\\Omen\\Documents\\GitHub\\Thesis\\ThesisAndroid\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex
