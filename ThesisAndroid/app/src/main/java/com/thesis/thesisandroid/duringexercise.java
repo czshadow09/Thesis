@@ -27,8 +27,11 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.util.Arrays;
 import java.util.List;
+=======
+>>>>>>> parent of f0e198d... PUSH!!!
 =======
 >>>>>>> parent of f0e198d... PUSH!!!
 import java.util.Random;
@@ -132,8 +135,12 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                             public void run() {
                                 times++;
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 double accel = Double.parseDouble(textView.getText().toString());
                                 if(accel >= 1.98) {
+=======
+                                if(times == 2){
+>>>>>>> parent of f0e198d... PUSH!!!
 =======
                                 if(times == 2){
 >>>>>>> parent of f0e198d... PUSH!!!
@@ -145,6 +152,7 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                                     double round = Math.round(power);
                                     int result = (int) round;
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     addValue(result);
                                     repets++;
                                     times = 0;
@@ -154,6 +162,10 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                                     } catch (InterruptedException e) {
                                         e.printStackTrace();
                                     }
+=======
+                                    pow.setText(String.valueOf(result));
+                                    times = 0;
+>>>>>>> parent of f0e198d... PUSH!!!
 =======
                                     pow.setText(String.valueOf(result));
                                     times = 0;
@@ -449,7 +461,10 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                         deviceConnected=true;
                         beginListenForData();
 <<<<<<< HEAD
+<<<<<<< HEAD
                         onBarbellCurl1();
+=======
+>>>>>>> parent of f0e198d... PUSH!!!
 =======
 >>>>>>> parent of f0e198d... PUSH!!!
                         break;
