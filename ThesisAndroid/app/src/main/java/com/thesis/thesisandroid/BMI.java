@@ -44,21 +44,13 @@ public class BMI extends AppCompatActivity {
         String bmilabel="";
 
         if(Float.compare(bmi, 15f)<=0) {
-            bmilabel = getString(R.string.very_severely_underweight);
-        }else if(Float.compare(bmi,15f)>0 && Float.compare (bmi, 16f)<=0){
-            bmilabel = getString(R.string.severely_underweight);
-        }else if(Float.compare(bmi,16f)>0 && Float.compare (bmi, 18.5f)<=0){
             bmilabel = getString(R.string.underweight);
-        }else if(Float.compare(bmi,18.5f)>0 && Float.compare (bmi, 25f)<=0){
+        }else if(Float.compare(bmi,18.5f)>0 && Float.compare (bmi, 22.9f)<=0){
             bmilabel = getString(R.string.normal);
-        }else if(Float.compare(bmi,25f)>0 && Float.compare (bmi, 30f)<=0){
+        }else if(Float.compare(bmi,23f)>0 && Float.compare (bmi, 24.9f)<=0){
             bmilabel = getString(R.string.overweight);
-        }else if(Float.compare(bmi,30f)>0 && Float.compare (bmi, 35f)<=0){
-            bmilabel = getString(R.string.obese_class_1);
-        }else if(Float.compare(bmi,35f)>0 && Float.compare (bmi, 40f)<=0) {
-            bmilabel = getString(R.string.obese_class_2);
         }else {
-            bmilabel = getString(R.string.obese_class_3);
+            bmilabel = getString(R.string.obese_class_1);
         }
         bmilabel = bmi + "\n\n" + bmilabel;
         result.setText(bmilabel);

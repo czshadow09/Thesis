@@ -23,16 +23,7 @@
         <activity android:name=".Home" />
         <activity android:name=".BMI"
             android:parentActivityName=".Home"> </activity>
-        <activity android:name=".PowerExercise" />
-        <activity android:name=".repmax" />
-        <activity
-            android:name=".chestscrolling"
-            android:label="@string/title_activity_chestscrolling" />
-        <activity android:name=".armscrolling" />
-        <activity android:name=".backscrolling" />
-        <activity android:name=".legscrolling" />
         <activity android:name=".exerciselist" />
-        <activity android:name=".performui" />
         <activity android:name=".duringexercise" />
         <activity android:name=".result" />
         <activity android:name=".report"

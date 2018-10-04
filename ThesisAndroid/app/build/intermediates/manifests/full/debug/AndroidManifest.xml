@@ -34,16 +34,7 @@
             android:name="com.thesis.thesisandroid.BMI"
             android:parentActivityName="com.thesis.thesisandroid.Home" >
         </activity>
-        <activity android:name="com.thesis.thesisandroid.PowerExercise" />
-        <activity android:name="com.thesis.thesisandroid.repmax" />
-        <activity
-            android:name="com.thesis.thesisandroid.chestscrolling"
-            android:label="@string/title_activity_chestscrolling" />
-        <activity android:name="com.thesis.thesisandroid.armscrolling" />
-        <activity android:name="com.thesis.thesisandroid.backscrolling" />
-        <activity android:name="com.thesis.thesisandroid.legscrolling" />
         <activity android:name="com.thesis.thesisandroid.exerciselist" />
-        <activity android:name="com.thesis.thesisandroid.performui" />
         <activity android:name="com.thesis.thesisandroid.duringexercise" />
         <activity android:name="com.thesis.thesisandroid.result" />
         <activity

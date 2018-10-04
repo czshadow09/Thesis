@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.HashMap;
 
 public class DbHandler extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "exerreport.db";
+    public static final String DATABASE_NAME = "reportexer.db";
     public static final String TABLE_NAME = "report_data";
     public static final String COL1 = "ID";
     public static final String COL2 = "exername";

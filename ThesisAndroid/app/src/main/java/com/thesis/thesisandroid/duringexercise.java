@@ -26,23 +26,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of c9105cd... Revert "PUSH!!!"
 import java.util.Arrays;
-<<<<<<< HEAD
 import java.util.List;
-<<<<<<< HEAD
-=======
->>>>>>> parent of f0e198d... PUSH!!!
-=======
->>>>>>> parent of f0e198d... PUSH!!!
-=======
->>>>>>> parent of 81eb1e5... fdf
-=======
->>>>>>> parent of c9105cd... Revert "PUSH!!!"
 import java.util.Random;
 import java.util.Set;
 import java.util.Timer;
@@ -81,7 +66,9 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
     double power = 0;
     double repmax = 0;
     int index = 0;
+    boolean inc = false;
     StringBuilder sb = new StringBuilder();
+    List<Integer> powList = new ArrayList<Integer>();
 
     @Override
 
@@ -116,7 +103,7 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
     public void chooseExercise() {
         String exercise = tv.getText().toString();
         if(exercise == "Benchpress (chest)") {
-            onBenchPress();
+            onBarbellCurl1();
         }
         else if(exercise == "Deadlift (back)") {
             onDeadLift();
@@ -129,9 +116,7 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    public void onBenchPress() {
-        final double iniDis = 2;
-        final double finDis = 3;
+    public void onBarbellCurl1() {
         Thread t = new Thread(){
             @Override
             public void run(){
@@ -144,67 +129,17 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                             @Override
                             public void run() {
                                 times++;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 double accel = Double.parseDouble(textView.getText().toString());
                                 if(accel >= 1.98) {
-=======
-                                if(times == 2){
->>>>>>> parent of f0e198d... PUSH!!!
-=======
-                                if(times == 2){
->>>>>>> parent of f0e198d... PUSH!!!
-=======
-                                double accel = Double.parseDouble(textView.getText().toString());
-                                if(accel >= 1.98) {
->>>>>>> parent of c9105cd... Revert "PUSH!!!"
-                                    sumDis = finDis - iniDis;
-                                    velocity = sumDis / times;
-                                    kilos = Double.parseDouble(weigh.getText().toString());
-                                    double newt = kilos * 9.8066500286389;
-                                    power = newt * velocity;
-                                    double round = Math.round(power);
-                                    int result = (int) round;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of c9105cd... Revert "PUSH!!!"
-                                    addValue(result);
-=======
-                                sumDis = finDis - iniDis;
-                                velocity = sumDis / times;
-                                kilos = Double.parseDouble(weigh.getText().toString());
-                                double newt = kilos * 9.8066500286389;
-                                power = newt * velocity;
-                                double round = Math.round(power);
-                                int result = (int) round;
-                                pow.setText(String.valueOf(result));
-                                times = 0;
-                                double accel = Double.parseDouble(textView.getText().toString());
-                                if(accel >= 2) {
->>>>>>> parent of 81eb1e5... fdf
                                     repets++;
-                                    rep.setText(String.valueOf((int)repets));
                                     try {
-                                        Thread.sleep(1500);
+                                        Thread.sleep(850);
                                     } catch (InterruptedException e) {
                                         e.printStackTrace();
                                     }
-<<<<<<< HEAD
-=======
-                                    pow.setText(String.valueOf(result));
-                                    times = 0;
->>>>>>> parent of f0e198d... PUSH!!!
-=======
-                                    pow.setText(String.valueOf(result));
-                                    times = 0;
->>>>>>> parent of f0e198d... PUSH!!!
-=======
->>>>>>> parent of c9105cd... Revert "PUSH!!!"
                                 }
+                                rep.setText(String.valueOf((int) repets));
+                                timer.setText(String.valueOf(times));
                             }
                         });
                     } catch (InterruptedException e) {
@@ -329,6 +264,9 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
         };
         t.start();
     }
+    public void addValue(Integer x) {
+        powList.add(x);
+    }
     public boolean BTinit()
     {
         boolean found=false;
@@ -442,17 +380,27 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
     public void onBackPressed() {
     }
     public void openresult(){
+        final double finDis = 2.03;
+        final double iniDis = 1.64;
+        sumDis = finDis - iniDis;
+        double wk = sumDis * repets;
+        kilos = Double.parseDouble(weigh.getText().toString());
+        double newt = kilos * 9.8066500286389;
+        double work = newt * wk;
+        double power = work / times;
+        double round = Math.round(power);
+        int result = (int) round;
         double weight = Double.parseDouble(weigh.getText().toString());
         repmax = weight * (1 + repets / 30);
         double roundOff = Math.round(repmax);
-        int result = (int) roundOff;
-        oR.setText(String.valueOf(result));
+        int result1 = (int) roundOff;
+        oR.setText(String.valueOf(result1));
         Intent intent = new Intent(this, result.class);
         intent.putExtra("Exercise name", tv.getText().toString());
         intent.putExtra("Weight", weigh.getText().toString() + " kg");
         intent.putExtra("reps", rep.getText().toString());
         intent.putExtra("RepMax", oR.getText().toString());
-        intent.putExtra("power", pow.getText().toString());
+        intent.putExtra("power", String.valueOf(result));
         startActivity(intent);
     }
     private void initViews1() {
@@ -487,21 +435,7 @@ public class duringexercise extends AppCompatActivity implements View.OnClickLis
                     {
                         deviceConnected=true;
                         beginListenForData();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                         onBarbellCurl1();
-=======
->>>>>>> parent of f0e198d... PUSH!!!
-=======
->>>>>>> parent of f0e198d... PUSH!!!
-=======
-                        onBenchPress();
->>>>>>> parent of 81eb1e5... fdf
-=======
-                        onBarbellCurl1();
->>>>>>> parent of c9105cd... Revert "PUSH!!!"
                         break;
                     }
                 }

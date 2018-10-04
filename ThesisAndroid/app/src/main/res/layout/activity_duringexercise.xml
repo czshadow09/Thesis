@@ -107,6 +107,7 @@
                 android:layout_marginBottom="-28dp"
                 android:layout_toEndOf="@+id/textViewExercise"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:visibility="invisible" />
 
             <TextView
@@ -125,10 +126,11 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/textViewExercise"
                 android:layout_alignParentEnd="true"
-                android:layout_marginBottom="-63dp"
                 android:layout_marginEnd="35dp"
+                android:layout_marginBottom="-63dp"
+                android:text="TextView"
                 android:textColor="@color/white"
-                android:text="TextView" />
+                android:visibility="invisible" />
 
 
         </RelativeLayout>

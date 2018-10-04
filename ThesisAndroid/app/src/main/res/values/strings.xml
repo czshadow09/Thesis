@@ -9,9 +9,7 @@
     <string name="underweight">Underweight</string>
     <string name="normal">Normal</string>
     <string name="overweight">Overweight</string>
-    <string name="obese_class_1">Obese Class I (Moderately Obese)</string>
-    <string name="obese_class_2">Obese Class II (Severely Obese)</string>
-    <string name="obese_class_3">Obese Class III (Very Severely Obese)</string>
+    <string name="obese_class_1">Obese</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

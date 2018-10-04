@@ -33,6 +33,9 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <file leaf-file-name="menu_chesttab.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_chesttab.xml">
           <provider selected="true" editor-type-id="android-designer2">
@@ -42,6 +45,7 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+<<<<<<< HEAD
 =======
       <file leaf-file-name="report.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/report.java">
@@ -62,6 +66,8 @@
                 <element signature="imports" expanded="true" />
               </folding>
 >>>>>>> parent of 81eb1e5... fdf
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
             </state>
           </provider>
         </entry>
@@ -91,6 +97,7 @@
       </file>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="menu_tabchest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_tabchest.xml">
 =======
@@ -100,13 +107,17 @@
 >>>>>>> parent of f0e198d... PUSH!!!
 =======
 >>>>>>> parent of f0e198d... PUSH!!!
+=======
+      <file leaf-file-name="menu_tabchest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_tabchest.xml">
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
           <provider selected="true" editor-type-id="android-designer2">
             <state />
           </provider>
           <provider editor-type-id="text-editor">
-<<<<<<< HEAD
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
 =======
             <state relative-caret-position="147">
               <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="47" />
@@ -137,6 +148,8 @@
 >>>>>>> parent of f0e198d... PUSH!!!
 =======
 >>>>>>> parent of 81eb1e5... fdf
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
               <folding />
             </state>
           </provider>
@@ -145,6 +158,7 @@
       <file leaf-file-name="BMI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/BMI.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -162,6 +176,10 @@
             <state relative-caret-position="420">
               <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
 >>>>>>> parent of 81eb1e5... fdf
+=======
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
               <folding />
             </state>
           </provider>
@@ -173,11 +191,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of f0e198d... PUSH!!!
@@ -268,6 +290,8 @@
 >>>>>>> parent of f0e198d... PUSH!!!
 =======
 >>>>>>> parent of 81eb1e5... fdf
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
         </entry>
       </file>
     </leaf>
@@ -286,6 +310,7 @@
       <find>click</find>
       <find>onclick</find>
       <find>initview</find>
+      <find>times</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -2325,7 +2350,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -2349,6 +2374,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="ProjectPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
@@ -2365,24 +2391,14 @@
 >>>>>>> parent of f0e198d... PUSH!!!
 =======
 >>>>>>> parent of 81eb1e5... fdf
+=======
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <pane id="AndroidView">
         <subPane>
           <expand>
-            <path>
-              <item name="ThesisAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="ThesisAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="ThesisAndroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
             <path>
               <item name="ThesisAndroid" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
@@ -2394,6 +2410,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <pane id="Scratches" />
       <pane id="ProjectPane" />
@@ -2404,6 +2421,9 @@
 >>>>>>> parent of f0e198d... PUSH!!!
 =======
 >>>>>>> parent of f0e198d... PUSH!!!
+=======
+      <pane id="PackagesPane" />
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2587,7 +2607,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2608,6 +2628,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20622987" sideWeight="0.49603623" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32839224" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
 =======
@@ -2620,6 +2641,10 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14070891" sideWeight="0.49603623" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
 >>>>>>> parent of 81eb1e5... fdf
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20622987" sideWeight="0.49603623" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32839224" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2645,6 +2670,7 @@
   <component name="editorHistoryManager">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/exerciselist.java">
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_report.xml">
@@ -2654,6 +2680,9 @@
 <<<<<<< HEAD
 >>>>>>> parent of f0e198d... PUSH!!!
 =======
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/exerciselist.java">
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
@@ -2695,6 +2724,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/report.java">
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exerciselist.xml">
@@ -2708,6 +2738,9 @@
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exerciselist.xml">
 >>>>>>> parent of 81eb1e5... fdf
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/report.java">
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="47" />
@@ -2755,6 +2788,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of f0e198d... PUSH!!!
@@ -2777,6 +2811,8 @@
 >>>>>>> parent of f0e198d... PUSH!!!
 =======
 >>>>>>> parent of 81eb1e5... fdf
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
@@ -2800,6 +2836,9 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/armscrolling.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/BluetoothArduinoHelper.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/PowerExercise.java" />
@@ -2807,6 +2846,7 @@
       <provider editor-type-id="android-manifest">
         <state />
       </provider>
+<<<<<<< HEAD
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exerciselist.xml">
       <provider editor-type-id="android-designer2">
@@ -2822,6 +2862,8 @@
 >>>>>>> parent of f0e198d... PUSH!!!
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exerciselist.xml">
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="47" />
@@ -2868,6 +2910,7 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/datalistAdapter.java">
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_view_layout.xml">
@@ -2880,12 +2923,16 @@
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/datalistAdapter.java">
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1029">
           <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_report.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -2894,6 +2941,9 @@
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_view_layout.xml">
 >>>>>>> parent of 81eb1e5... fdf
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/data.java">
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1029">
           <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
@@ -2903,6 +2953,7 @@
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2919,6 +2970,11 @@
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_report.xml">
 >>>>>>> parent of 81eb1e5... fdf
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/performui.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/repmax.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/MainActivity.java">
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
@@ -3026,6 +3082,7 @@
         <state />
       </provider>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exerciselist.xml">
@@ -3039,12 +3096,15 @@
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
 >>>>>>> parent of 81eb1e5... fdf
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="37" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3063,6 +3123,9 @@
         </state>
       </provider>
 >>>>>>> parent of 81eb1e5... fdf
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_duringexercise.xml">
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
@@ -3077,6 +3140,7 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exerciselist.xml">
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
@@ -3086,6 +3150,9 @@
 >>>>>>> parent of f0e198d... PUSH!!!
 =======
 >>>>>>> parent of 81eb1e5... fdf
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exerciselist.xml">
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
@@ -3100,6 +3167,9 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
 =======
 >>>>>>> parent of 81eb1e5... fdf
@@ -3110,6 +3180,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/Home.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of f0e198d... PUSH!!!
@@ -3127,6 +3198,8 @@
       </provider>
       <provider editor-type-id="text-editor">
 >>>>>>> parent of f0e198d... PUSH!!!
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
         <state relative-caret-position="0">
           <caret line="161" column="42" lean-forward="false" selection-start-line="161" selection-start-column="42" selection-end-line="161" selection-end-column="42" />
         </state>
@@ -3134,12 +3207,16 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_result.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5494">
+<<<<<<< HEAD
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_chesttab.xml">
       <provider selected="true" editor-type-id="android-designer2">
@@ -3164,6 +3241,8 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_tabchest.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -3186,6 +3265,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
@@ -3215,6 +3295,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
 >>>>>>> parent of 81eb1e5... fdf
+=======
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="37" />
@@ -3226,6 +3311,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3247,15 +3333,19 @@
 =======
       <provider editor-type-id="text-editor">
 >>>>>>> parent of 81eb1e5... fdf
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
 <<<<<<< HEAD
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_tabchest.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
@@ -3264,6 +3354,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of f0e198d... PUSH!!!
@@ -3285,6 +3376,8 @@
         <state relative-caret-position="261">
           <caret line="80" column="8" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
 >>>>>>> parent of 81eb1e5... fdf
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3311,6 +3404,7 @@
       </provider>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of f0e198d... PUSH!!!
@@ -3324,6 +3418,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
 >>>>>>> parent of 81eb1e5... fdf
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -3331,11 +3427,11 @@
       </provider>
 <<<<<<< HEAD
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_view_layout.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+<<<<<<< HEAD
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/MainActivity.java">
 >>>>>>> parent of f0e198d... PUSH!!!
@@ -3346,6 +3442,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/MainActivity.java">
 >>>>>>> parent of 81eb1e5... fdf
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
@@ -3355,6 +3453,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml">
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
@@ -3404,6 +3505,7 @@
         <state relative-caret-position="147">
           <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="47" />
           <folding />
+<<<<<<< HEAD
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -3423,6 +3525,8 @@
             <element signature="imports" expanded="true" />
           </folding>
 >>>>>>> parent of f0e198d... PUSH!!!
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -3443,6 +3547,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/duringexercise.java">
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/report.java">
@@ -3512,6 +3619,7 @@
           <folding />
         </state>
       </provider>
+<<<<<<< HEAD
     </entry>
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/thesis/thesisandroid/exerciselist.java">
@@ -3634,6 +3742,8 @@
         </state>
       </provider>
 >>>>>>> parent of 81eb1e5... fdf
+=======
+>>>>>>> parent of c9105cd... Revert "PUSH!!!"
     </entry>
   </component>
 </project>
